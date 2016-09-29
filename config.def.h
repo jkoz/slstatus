@@ -22,12 +22,12 @@ static unsigned int update_interval = 1;
 - wifi_perc (wifi signal in percent) [argument: wifi card interface name] */
 static const struct arg args[] = {
     /* function     format          argument */
-    { wifi_perc,    "wifi %4s | ",  "wlp2s0" },
-    { battery_perc, "bat %4s | ",   "BAT1" },
-    { cpu_perc,     "cpu %4s ",     NULL },
-    { temp,         "%3s | ",       "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input" },
-    { ram_perc,     "ram %3s | ",   NULL },
-    { vol_perc,     "vol %4s | ",   "default" },
-    { disk_perc,    "ssd %3s | ",   "/" },
-    { datetime,     "%s",           "%B %d, %Y | %H:%M:%S" },
+    { battery_perc, "B%s    ",   "BAT1" },
+    { wifi_perc,    "W%s    ",  "wlp2s0" },
+    //{ cpu_perc,     "cpu %4s   ",     NULL },
+    //{ temp,         "%3s   ",       "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input" },
+    //{ ram_perc,     "ram %3s   ",   NULL },
+    //{ vol_perc,     "vol %4s | ",   "default" },
+    //{ disk_perc,    "ssd %3s | ",   "/" },
+    { datetime, "%s", "%b %d   %l:%M%p  " },
 };
